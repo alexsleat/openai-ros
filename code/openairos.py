@@ -13,7 +13,7 @@ class openai_handler:
         self.response = ""
         self.prompt = ""
         self.chat_history = self.initial_prompt
-        self.robot_name = "Furhat"
+        self.robot_name = "AI"
         self.chat_history_flag = True
 
         self.openai_model = "text-curie-001"
@@ -47,7 +47,7 @@ class openai_handler:
         response = openai.Completion.create(
             model=self.openai_model,
             prompt=p,
-            temperature=0.8,
+            temperature=0.5,
             max_tokens=256,
             top_p=0.3,
             frequency_penalty=0.1,
@@ -76,5 +76,6 @@ class openai_handler:
 
 if __name__ == "__main__":
 
-    o_h = openai_handler("The following is a chat between a human and a robot called Furhat, who is a helpful and happy at KTH, Stockholm.")
+    # o_h = openai_handler("The following is a chat between a human and a robot called Furhat, who is a helpful and happy at KTH, Stockholm.")
+    o_h = openai_handler("A conversation between a human and an AI who is assertive sassy, sarcastic that likes to lie and make fun of the human. It also likes to ask questions.")
     o_h.main()
