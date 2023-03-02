@@ -10,7 +10,7 @@ Create a new file called config.sh with your, eg:
     . build_docker.sh
 
 ## Run the docker:
-    . run_docker.sh
+    ./run_docker.sh
     
 ## Attach a new terminal to the running docker:
-    . run_docker.sh
+    . attach_docker.sh
