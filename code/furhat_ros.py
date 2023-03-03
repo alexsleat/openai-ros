@@ -113,7 +113,7 @@ class furhat:
                 if(len(msg) > 0):
                     # Set LED to blue when detected something:
                     self.led(0,0,255)
-                    self.speaking_counter = 10
+                    self.speaking_counter = 20
                     self.response_pub.publish(msg)
 
             # If the robot is speaking, keep waiting for the counter to finish

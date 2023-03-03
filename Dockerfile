@@ -40,7 +40,7 @@ WORKDIR "/home/user/"
 # ADD test test/
 
 COPY config.sh /home/user/
-RUN bash -c "source /home/user/config.sh"
+RUN bash -c "echo 'source /home/user/config.sh' >> ~/.bashrc"
 ## @TODO below not working correctly:
 WORKDIR "/home/user/code"
 
